@@ -2,6 +2,10 @@ class DiariesController < ApplicationController
 
 before_filter :require_login, only: [:create, :destroy, :edit, :update]
 
+  def search
+    @diaries = Diary.search params[:search]
+  end
+
   # GET /diaries
   # GET /diaries.json
   def index
