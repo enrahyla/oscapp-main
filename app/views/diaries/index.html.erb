@@ -1,0 +1,413 @@
+
+    <div class="container">
+
+      <!-- Main hero unit -->
+      <div class="hero-unit">
+        <h1>Oval Ski Club!</h1>
+        <h2>Want to Learn to Ski?</h2>
+        <br>
+        <br>
+        <br>
+      </div>
+      <!-- end of main hero uni -->
+
+      <div class ="pagination-centered">
+      <div class="pagination_centered" style="max-height:200px; overflow-y:scroll;   border-top: 5px solid #205090;">
+
+<<<<<<< HEAD
+      <div class ="pagination-centered">
+      <div class="pagination_centered" style="max-height:200px; overflow-y:scroll;   border-top: 5px solid #205090;">
+
+=======
+        <!-- start of diaries database-->
+>>>>>>> as3
+        <%- model_class = Diary -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>  
+<% if logged_in? %>
+ <!-- button for new entry-->
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_diary_path,
+            :class => 'btn btn-primary' %>
+            <% end %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:date) %></th>
+      <th><%= model_class.human_attribute_name(:body) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @diaries.each do |diary| %>
+      <tr>
+        <td><%= link_to diary.id, diary_path(diary) %></td>
+        <td><%= diary.title.strftime("%d/%m/%Y %H:%M")  %></td>
+        <td><%= diary.body %></td>
+<<<<<<< HEAD
+        <td><%=l diary.created_at%></td>
+=======
+        <td><%=l diary.created_at, :format => :long %></td>
+>>>>>>> as3
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_diary_path(diary), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      diary_path(diary),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+    <!-- end of database-->
+  </tbody>
+</table>
+
+
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+        <br>
+        <br>
+
+
+       <div class="container"><!--start of container-->
+       <div class="row">
+       <div class="span8" style="border-top: 5px solid #205090;">
+       <h2>Lessons</h2>
+       <p>Oval Ski club holds lessons for juniors and adults, our lessons cover the full spetrum of ability.</p>
+       <p>Everyone is welcome to join the club from first timers to full seasoned pros. If you are joining as a beginner then see the start dates of our beginner lessons in our diary to the right of the page</p>
+       <br>
+       <p>We are a members only club and everyone must join us prior to skiing. This will only take a few minutes and can be done on your first visit. The money we raise through our memberships are used for your benefit for equipment or instructor training for example. As a member you will recieve exclusive discounts from various local sports shops. Prices for member ships can be found below.</p>
+       <br>
+       <h3>Annual Mambership Fee</h3>
+       <p>Joining us is simple, it can be by going down to the ski hut during the session hours and speaking to of the committe members or helpers. Membership requires renewal at the start of each sessions in September. The Prices are as follows:</p>
+       <ul>
+        <li>Junior Membership: £7.00</li>
+        <li>Senior Membership: £15.00</li>
+        <li>Family Membership: £30.00</li>
+      </ul>
+      <br>
+      <h3>Junior Club<small><br>5+ to under 18's</small></h3>
+      <p>Junior club is held on Saturday mornings fro 10AM to 1PM. The lessons cost £5.00 per person per session and £2.00 if you use yours own equipment. The ages groups are split into two differnt times. Please see below for more details.</p>
+      <ul>
+        <li>10AM - 11AM 5+ to under 11's</li>
+        <li>11.30AM - 1PM 11+</li>
+      </ul>
+      <br>
+
+      <h3>Adult Club</h3>
+      <p>Adult club is run on Sunday evenings from 5PM to 8PM. On occasions we run family sessions so adults and kids can ski together. During these sessions everyone involved must be able to turn and stop safely. The times and dates for these will be advertised in the ski hut on the notice board. The lessons cost £5.00 per person per sessions and £2.00 if you use your own equipment. The times for these can be seen below.</p>
+      <ul>
+        <li>5 - 6PM Beginners lessons</li>
+        <li>6 - 7PM Open skiing sessions</li>
+        <li>7 - 8PM Improvement/Advanced lessons. This is for people who can snowplough turn.</li><br>
+      </ul>
+    </div>
+
+
+    <!--diary start scrollable-->
+    <div class="span4" style="max-height:700px; overflow-y:scroll;   border-top: 5px solid #205090;">
+      <h3>Dates for the diary</h3>
+
+        <i class="icon-calendar"></i>
+        <strong>Saturday 13/10/12</strong>
+        <p>10.00AM - 11.00AM
+          <br>
+          Junior clib for under 11's. New beginners lessons start.
+          <br>
+          <br>
+          11.30AM - 1.00PM
+          <br>
+          Junior club for 11+. New beginners lessons start.</p>
+          <br>
+
+          <i class="icon-calendar"></i>
+          <strong>Sunday 14/10/12</strong>
+          <p>5.00PM - 6.00PM
+            <br>
+            Adult club - Beginners lessons (week 1 of 3)
+            <br>
+            <br>
+            6.00PM - 7.00PM
+            <br>
+            Adult club - Open skiing sessions + improver lessons
+            <br>
+            <br>
+            7.00PM - 8.00PM
+            <br>
+            Adult club - Intermediate/advanced lessons</p>
+            <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Saturday 20/10/12</strong>
+            <p>10.00AM - 11.00AM
+              <br>
+              Junior club for under 11's including the under 5's taster sessions
+              <br>
+              <br>
+              11.30AM - 1.00PM
+              <br>
+              Junior club for 11+</p>
+              <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Sunday 21/10/12</strong>
+            <p>10.00AM - 11.00AM
+              <br>
+              Junior club for under 11's including the under 5's taster sessions
+              <br>
+              <br>
+              11.30AM - 1.00PM
+              <br>
+              Junior club for 11+</p>
+              <br>
+
+              <i class="icon-calendar"></i>
+            <strong>Saturday 27/10/12</strong>
+            <p>10.00AM - 11.00AM
+              <br>
+              Junior club for under 11's.
+              <br>
+              <br>
+              11.30AM - 1.00PM
+              <br>
+              Junior club for 11+</p>
+              <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Sunday 28/10/12</strong>
+            <p>5.00PM - 6.00PM
+              <br>
+              Adult club - beginners lessons(week 3 of 3) 
+              <br>
+              <br>
+              6.00PM - 7.00PM
+              <br>
+              Adult club - open skiing session + improver lessons
+              <br>
+              <br>
+              7.00PM - 8.00PM
+              <br>
+              Adult club - intermediate/advanced lessons</p>
+              <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Saturday 03/11/12</strong>
+            <p>10.00AM - 11.00AM
+              <br>
+              Junior club for under 11's. New beginners start.
+              <br>
+              <br>
+              11.30AM - 1.00PM
+              <br>
+              Junior club for 11+. New beginners start.</p>
+
+            <i class="icon-calendar"></i>
+            <strong>Sunday 04/11/12</strong>
+            <p>5.00PM - 6.00PM
+              <br>
+              Adult Club - Beginners lessons week 1 of 3.
+              <br>
+              <br>
+              6.00PM - 7.00PM
+              <br>
+              Adult club - Open skiing sessions + improver lessons
+              <br>
+              <br>
+              7.00PM - 8.00PM
+              Adult Club - Intermediate/Advanced lessons</p>
+              <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Saturday 10/11/12</strong>
+            <p>10.00AM - 11.00AM
+              <br>
+              Junior club for under 11's.
+              <br>
+              <br>
+              11.30AM - 1.00PM
+              <br>
+              Junior club for 11+</p>
+              <br>
+
+
+            <i class="icon-calendar"></i>
+            <strong>Sunday 11/11/12</strong>
+            <p>5.00PM - 6.00PM
+              <br>
+              Adult Club - Beginners lessons week 2 of 3.
+              <br>
+              <br>
+              6.00PM - 7.00PM
+              <br>
+              Adult club - Open skiing sessions + improver lessons
+              <br>
+              <br>
+              7.00PM - 8.00PM
+              Adult Club - Intermediate/Advanced lessons</p>
+              <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Saturday 17/11/12</strong>
+            <p>10.00AM - 11.00AM
+              <br>
+              Junior club for under 11's.
+              <br>
+              <br>
+              11.30AM - 1.00PM
+              <br>
+              Junior club for 11+</p>
+              <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Sunday 18/11/12</strong>
+            <p>****Yellow Duckmarine****
+              <br>
+              11.30AM
+              <br>
+              Albert Dock. See Events page for more details.
+              <br>
+              5.00PM - 6.00PM
+              <br>
+              Adult Club - Beginners lessons week 3 of 3.
+              <br>
+              <br>
+              6.00PM - 7.00PM
+              <br>
+              Adult club - Open skiing sessions + improver lessons
+              <br>
+              <br>
+              7.00PM - 8.00PM
+              Adult Club - Intermediate/Advanced lessons</p>
+              <br>
+
+
+            <i class="icon-calendar"></i>
+            <strong>Saturday 24/11/12</strong>
+            <p>10.00AM - 11.00AM
+              <br>
+              Junior club for under 11's. New beginners start.
+              <br>
+              <br>
+              11.30AM - 1.00PM
+              <br>
+              Junior club for 11+. New beginners start.</p>
+              <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Sunday 25/11/12</strong>
+            <p>5.00PM - 6.00PM
+              <br>
+              Adult Club - Beginners lessons week 1 of 4.
+              <br>
+              <br>
+              6.00PM - 7.00PM
+              <br>
+              Adult club - Open skiing sessions + improver lessons
+              <br>
+              <br>
+              7.00PM - 8.00PM
+              Adult Club - Intermediate/Advanced lessons</p>
+              <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Saturday 01/12/12</strong>
+            <p>10.00AM - 11.00AM
+              <br>
+              Junior club for under 11's.
+              <br>
+              <br>
+              11.30AM - 1.00PM
+              <br>
+              Junior club for 11+</p>
+              <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Sunday 02/12/12</strong>
+            <p>5.00PM - 6.00PM
+              <br>
+              Adult Club - Beginners lessons week 2 of 4.
+              <br>
+              <br>
+              6.00PM - 7.00PM
+              <br>
+              Adult club - Open skiing sessions + improver lessons
+              <br>
+              <br>
+              7.00PM - 8.00PM
+              Adult Club - Intermediate/Advanced lessons</p>
+              <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Saturday 08/12/12</strong>
+            <p>10.00AM - 11.00AM
+              <br>
+              Junior club for under 11's.
+              <br>
+              <br>
+              11.30AM - 1.00PM
+              <br>
+              Junior club for 11+</p>
+              <br>
+
+
+            <i class="icon-calendar"></i>
+            <strong>Sunday 09/12/12</strong>
+            <p>5.00PM - 6.00PM
+              <br>
+              Adult Club - Beginners lessons week 3 of 4.
+              <br>
+              <br>
+              6.00PM - 7.00PM
+              <br>
+              Adult club - Open skiing sessions + improver lessons
+              <br>
+              <br>
+              7.00PM - 8.00PM
+              Adult Club - Intermediate/Advanced lessons</p>
+              <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Wednesday 23/01/13</strong>
+            <p>5.00pm - 8.00pm
+              <br>
+              ****Getting Nailed****
+              <br>
+              Caroline and Co beauty consultants. See Events page for more details.</p>s
+              <br>
+
+            <i class="icon-calendar"></i>
+            <strong>Friday 26/04/12</strong>
+            <br>
+            7.00PM - 10.30PM
+            <br>
+            ****Brewery Tour****
+            <br>
+            Peerles Brewery Tour. See events page for more details.
+            <br>
+
+              <p class ="text-info">*Please check back regularly for more dates</p><!--end of diary-->
+            </div>
+
+
+
+            
+            
+          </div><!-- end of container-->
+
+
+
+            <div class="row">
+              <div class="pagination-centered" style="border-top: 5px solid #205090;">
+                <h2>Sneak Preview</h2>
+                <p>Here is a sneak preview of what we do</p><!--YouTube video-->
+                <iframe width="560" height="315" src="http://www.youtube.com/embed/yOveLBduJKk?rel=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
