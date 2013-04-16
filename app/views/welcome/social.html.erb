@@ -223,7 +223,8 @@
           <img src="../assets/holiday.jpg" alt height="200px" width="200px" title="St.Chrtstoph/St.Anton">
         </div>
         <div class="span4"><!--Image of latest weather-->
-           <img src="../assets/arlbergweather.jpg" alt height="300px" width="500px" title="Alberg Weather">
+          <div id="test"></div>
+           <!--<img src="../assets/arlbergweather.jpg" alt height="300px" width="500px" title="Alberg Weather">-->
         </div>
       </div>
     </div><!--end of container-->
@@ -388,6 +389,19 @@
         e.stopPropagation();
       });
   });
+
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="../assets/jquery.zweatherfeed.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+  $('#test').weatherfeed(['AUXX0075'], {
+    forecast: true
+  });
+});
 
 </script>
 

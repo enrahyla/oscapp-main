@@ -21,6 +21,7 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   gem 'sorcery'
   gem "flickr.rb"
+  gem 'paperclip'
 end
 
 gem 'jquery-rails'

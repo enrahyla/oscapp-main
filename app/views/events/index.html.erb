@@ -23,7 +23,7 @@ events_url(format: "atom")) %>
         <td><%= link_to event.id, event_path(event) %></td>
         <td><%= event.title %></td>
         <td><%= event.body %></td>
-        <td><%=l event.created_at, :format => :long %></td>
+        <td><%= event.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_event_path(event), id: "update_link", remote: true, :class => 'btn btn-mini' %>

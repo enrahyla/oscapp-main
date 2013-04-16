@@ -1,3 +1,6 @@
+
+<%= form_for(@event, html: {multipart: true}) do |f| %>
+
 <div class = "container">
   <div class = "pagination-centered">
 
@@ -18,9 +21,17 @@
   <div class="form-actions">
 
     <%= f.submit nil, :class => 'btn btn-primary' %>
+    <p>
+      <% if @event.image.exists? %>
+      <%= image_tag @event.image.url%><br />
+    <% end %>
+      <%= f.label :image, "Attach an Image" %><br />
+      <%= f.file_field :image %>
+    </p>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 events_path, id: "new_link", :class => 'btn' %>
   </div>
 </div>
 </div>
+<% end %>
 <% end %>

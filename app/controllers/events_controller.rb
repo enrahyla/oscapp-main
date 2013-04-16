@@ -18,10 +18,10 @@ class EventsController < ApplicationController
 
 	def new
 	@event = Event.new 
-	respond_to do |format|
-			format.html { redirect_to event_path(@event)}
-			format.js
-	end
+	# respond_to do |format|
+	# 		format.html { redirect_to event_path(@event)}
+	# 		format.js
+	# end
 end
 
 	def create
