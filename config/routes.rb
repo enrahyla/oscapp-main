@@ -6,6 +6,8 @@ Oscapp::Application.routes.draw do
   
   resources :diaries
 
+  resources :flickr
+
   resources :authors
 
   resources :author_sessions,
@@ -17,13 +19,13 @@ Oscapp::Application.routes.draw do
 
   root :to => 'welcome#index'
 
-  get 'welcome/index'
-  get 'welcome/aboutus'
-  get 'welcome/contactus'
-  get 'welcome/faq'
-  get 'welcome/social'
-  get 'welcome/racingteam'
-  get 'welcome/lessons'
+  match 'index' => 'welcome#index'
+  match 'aboutus' => 'welcome#aboutus'
+  match 'contactus' => 'welcome#contactus'
+  match 'faq' => 'welcome#faq'
+  match 'social' => 'welcome#social'
+  match 'racingteam' => 'welcome#racingteam'
+  match 'lessons' => 'welcome#lessons'
   
 
   resources :events

@@ -2,11 +2,21 @@
 auto_discovery_link_tag(:atom, 
 events_url(format: "atom")) %>
 
+
+
 <div class = "container">
 <%- model_class = Event -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 </div>
+<center>
+  <p>RSS FEED FOR EVENTS</p>
+<%= link_to image_tag('feed-icon-14x14.png'), events_url(format: :json) %>
+<br>
+<br>
+<br>
+<br>
+</center>
 <table class="table table-striped">
   <thead>
     <tr>

@@ -1,0 +1,4 @@
+$('#new_diary').remove();
+$('#new_link').show();
+$('#incomplete_diaries').append('<%= j render(@diary) %>');
+$('#edit_diary_<%= @diary.id %>').submitOnCheck();

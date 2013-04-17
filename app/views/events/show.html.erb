@@ -8,7 +8,7 @@
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @event.title %></dd>
   <% if @event.image.exists? %>
-  <p><%= image_tag @event.image.url(:medium) %></p>
+  <p><%= image_tag @event.image.url %></p>
   <% end %>
   <dt><strong><%= model_class.human_attribute_name(:body) %>:</strong></dt>
   <dd><%= @event.body %></dd>
@@ -25,6 +25,7 @@
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
+
   </div>
 </div>
 <% end %>

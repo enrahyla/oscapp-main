@@ -1,4 +1,4 @@
-<% if @task.complete? %>
+<% if @event.complete? %>
   $('#edit_event_<%= @event.id %>').appendTo('#edit_events');
 <% else %>
   $('#edit_event_<%= @event.id %>').appendTo('#edit_events');
