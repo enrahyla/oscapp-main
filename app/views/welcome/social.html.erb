@@ -14,6 +14,19 @@
         padding-top: 60px;
         padding-bottom: 40px;
       }
+
+      div.htmltooltip{
+      position: absolute; /*leave this and next 3 values alone*/
+      z-index: 1000;
+      left: -1000px;
+      top: -1000px;
+      background: #272727;
+      border: 10px solid black;
+      color: white;
+      padding: 3px;
+      width: 250px; /*width of tooltip*/
+      }
+
     </style>
    <link href="../assets/bootstrap-responsive.css" rel="stylesheet">
 
@@ -142,8 +155,10 @@
 
             <address>
             <strong>Email</strong><br><!--email address-->
-              <a href="mailto:jane.croft1@ntlworld.com" title="Email: jane.croft1@ntlworld.com">jane.croft1@ntlworld.com </a> 
+              <a href="mailto:jane.croft1@ntlworld.com" rel="htmltooltip" title="Email: jane.croft1@ntlworld.com">jane.croft1@ntlworld.com </a> 
               </address>
+              <div class="htmltooltip">Drop us an email for more information.</div>
+
 
               <h5>Phone</h5>
               <ul class="unstyled">
@@ -154,12 +169,17 @@
             </div>
         </div>
 
+
           <!--start of up and coming events-->
           <div class="row">
             <div class="pagination-centered">
               <h1>Latest Up and Coming Events</h1>
-              <p>Click here to view the latest up and coming events and feel free to add your own events to the list. The events below are an overview of our most popular events. Click the button below to view our up and coming events and feel free to add your own.</p> <br>
-              <p><a class="btn btn-primary btn-large" href="../events" title="View Events"> View Events! &raquo;</a></p>
+              <p>Click here to view the latest up and coming events and feel free to add your own events to the list. The events below are an overview of our most popular events. Also look at our Flickr gallery from our last events. Please login with Facebook if you wish to add your own events.</p> <br>
+              <p><a class="btn btn-primary btn-large" href="../events" rel="htmltooltip" title="View Events"> View Events! &raquo;</a></p>
+              <div class="htmltooltip">Links to Events.</div>
+
+              <p><a class="btn btn-primary btn-large" href="gallery" rel="htmltooltip" title="View Gallery"> View Gallery! &raquo;</a></p>
+              <div class="htmltooltip">Links Gallery of past even images.</div>
               </div>
             </div>
 
@@ -404,6 +424,8 @@ $(document).ready(function () {
 });
 
 </script><!--end of weather script-->
+<script type="text/javascript" src="../assets/jquery-1.2.2.pack.js"></script>
+<script type="text/javascript" src="../assets/htmltooltip.js"></script>
 
   </body>
 </html>

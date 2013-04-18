@@ -14,6 +14,19 @@
         padding-top: 60px;
         padding-bottom: 40px;
       }
+
+        div.htmltooltip{
+      position: absolute; /*leave this and next 3 values alone*/
+      z-index: 1000;
+      left: -1000px;
+      top: -1000px;
+      background: #272727;
+      border: 10px solid black;
+      color: white;
+      padding: 3px;
+      width: 250px; /*width of tooltip*/
+      }
+
     </style>
     <link href="../assets/bootstrap-responsive.css" rel="stylesheet">
 
@@ -83,7 +96,8 @@
         <br>
         <a href="http://form.jotform.com/form/12565537275" title="Online Enrty Form">Online Entry Form</a><!-- link to online entry form-->
         <br>
-        <a href="http://www.sharks.org.uk/frostbite.pdf" title="Rules and Terms and conditions">Rules and Terms and conditions</a><!-- link to rules terms and conditions-->
+        <a href="http://www.sharks.org.uk/frostbite.pdf" title="Rules and Terms and conditions" rel="htmltooltip">Rules and Terms and conditions</a><!-- link to rules terms and conditions-->
+        <div class="htmltooltip">Find the rules and terms and conditions of our races here.</div>
         <br>
 
         <h2>Pendle winter race league</h2>
@@ -101,7 +115,8 @@
 
         <p>Please read the race details below, if you are interested in racing then this race can be entered by emailing:</p>
         <address>
-          <a href="mailto:pendleskiraces@live.co.uk" title="Email: pendleskiraces@live.co.uk">pendleskiraces@live.co.uk</a><!--email address link-->
+          <a href="mailto:pendleskiraces@live.co.uk" title="Email: pendleskiraces@live.co.uk" rel="htmltooltip">pendleskiraces@live.co.uk</a><!--email address link-->
+          <div class="htmltooltip">Send us an email for more information</div>
         </address>
 
 
@@ -175,6 +190,8 @@
 
         <script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
     <script type/javascript src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/jquery-1.2.2.pack.js"></script>
+<script type="text/javascript" src="../assets/htmltooltip.js"></script>
     <script language ="javascript">
     $(function(){
       $('.dropdown-toggle').dropdown();

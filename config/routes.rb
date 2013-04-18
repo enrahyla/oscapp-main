@@ -26,6 +26,7 @@ Oscapp::Application.routes.draw do
   match 'social' => 'welcome#social'
   match 'racingteam' => 'welcome#racingteam'
   match 'lessons' => 'welcome#lessons'
+  match 'gallery' => 'welcome#gallery'
   
 
   resources :events
