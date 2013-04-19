@@ -17,6 +17,12 @@ events_url(format: "atom")) %>
 <br>
 <br>
 </center>
+<%= form_tag events_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+<!-- rest of view omitted -->
 <table class="table table-striped">
   <thead>
     <tr>
@@ -35,8 +41,8 @@ events_url(format: "atom")) %>
         <td><%= event.body %></td>
         <td><%= event.created_at %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_event_path(event), id: "update_link", remote: true, :class => 'btn btn-mini' %>
+         <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_event_path(event), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       event_path(event),
                       :method => :delete,

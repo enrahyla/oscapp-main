@@ -1,6 +1,5 @@
 json.channel do
 
-
 for events in @events
       json.item
         json.title events.title

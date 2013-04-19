@@ -6,6 +6,8 @@ Oscapp::Application.routes.draw do
   
   resources :diaries
 
+  resources :events
+
   resources :flickr
 
   resources :authors
@@ -29,5 +31,5 @@ Oscapp::Application.routes.draw do
   match 'gallery' => 'welcome#gallery'
   
 
-  resources :events
+  
 end

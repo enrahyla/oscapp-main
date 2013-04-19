@@ -26,6 +26,8 @@ end
 
 gem 'jquery-rails'
 gem 'omniauth-facebook'
+gem 'sunspot_solr'
+gem 'sunspot_rails'
 
 
 # To use ActiveModel has_secure_password

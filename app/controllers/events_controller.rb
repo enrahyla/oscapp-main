@@ -5,8 +5,11 @@ class EventsController < ApplicationController
 	def index
 		@events = Event.all.reverse
 		#format.html
-		#format.xml {render :xml => @events }
-	end
+  @search = Event.search do
+    fulltext params[:search]
+  end
+  @events = @search.results
+end
 
 	def announcements
 		@events = Event.all

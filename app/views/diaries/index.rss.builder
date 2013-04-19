@@ -2,7 +2,7 @@ xml.instruct! :xml, :version => "1.0"
 xml.rss :version => "2.0" do
   xml.channel do
     xml.title "Diary Entries"
-    xml.description "Lots of entries"
+    xml.description "All of the important dates for the diary"
     xml.link diaries_url(format: :rss)
     
     for article in @diaries

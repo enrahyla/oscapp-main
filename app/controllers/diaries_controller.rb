@@ -13,19 +13,24 @@ before_filter :require_login, only: [:create, :destroy, :edit, :update]
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @diaries }
-    end
+      format.xml { render xml: @diaries }
+
+        @search = Diary.search do
+    fulltext params[:search]
   end
+  @diary = @search.results
+ end
+end
 
   # GET /diaries/1
   # GET /diaries/1.json
   def show
     @diary = Diary.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @diary }
-    end
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.json { render json: @diary }
+  
   end
 
   # GET /diaries/new
