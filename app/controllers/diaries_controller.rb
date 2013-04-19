@@ -18,7 +18,7 @@ before_filter :require_login, only: [:create, :destroy, :edit, :update]
         @search = Diary.search do
     fulltext params[:search]
   end
-  @diary = @search.results
+  @diaries = @search.results
  end
 end
 
@@ -41,6 +41,7 @@ end
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @diary }
+      format.js
     end
   end
 

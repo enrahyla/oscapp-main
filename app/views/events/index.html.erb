@@ -41,12 +41,14 @@ events_url(format: "atom")) %>
         <td><%= event.body %></td>
         <td><%= event.created_at %></td>
         <td>
+          <% if logged_in? %>
          <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_event_path(event), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       event_path(event),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, remote: true, :class => 'btn btn-mini btn-danger' %>
+                      <% end %>
         </td>
       </tr>
     <% end %>

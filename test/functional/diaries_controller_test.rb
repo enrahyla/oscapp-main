@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'capybara/rails'
 
 class DiariesControllerTest < ActionController::TestCase
   setup do
